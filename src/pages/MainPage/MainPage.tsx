@@ -3,7 +3,7 @@ import { Container } from 'widgets';
 export const MainPage = () => {
     return (
         <Container>
-            <div></div>
+            <div>d;fj;sdkf;l</div>
         </Container>
     );
 };

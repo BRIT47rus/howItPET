@@ -1,3 +1,4 @@
-import { LinkItem } from './LinkItem/LinkItem';
+import { LinkHref } from './LinkHREF/LinkHref';
+import { LinkUL } from './LinkUL/LinkUL';
 
-export { LinkItem };
+export { LinkHref, LinkUL };

@@ -1,10 +1,10 @@
-import { LinkItem } from 'shared';
+import { LinkHref } from 'shared';
 
 export const Footer = () => {
     return (
         <div>
-            <LinkItem label="Главная" />
-            <LinkItem label="О нас" />
+            <LinkHref label="Главная" />
+            <LinkHref label="О нас" />
         </div>
     );
 };

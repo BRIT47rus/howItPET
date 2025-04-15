@@ -8,7 +8,7 @@ type TLinkItem = {
     sizeStyle?: TSizeLinkItem;
 };
 
-export const LinkItem = ({
+export const LinkHref = ({
     label,
     sizeStyle = { height: 50, width: 100 },
     href = '/',

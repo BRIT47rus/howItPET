@@ -1,15 +1,16 @@
-import { Header } from 'widgets/Header/Header';
-import './App.css';
+import { MainPage } from 'pages';
 import { ThemeContextProvider } from './providers';
-import { Footer } from 'widgets/Footer/Footer';
+import { Container, Footer, Header } from 'widgets';
 
 function App() {
     return (
         <>
             <ThemeContextProvider>
-                <Header />
-
-                <Footer />
+                <Container>
+                    <Header />
+                    {/* <MainPage /> */}
+                    <Footer />
+                </Container>
             </ThemeContextProvider>
         </>
     );
