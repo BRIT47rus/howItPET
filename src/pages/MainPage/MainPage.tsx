@@ -1,4 +1,4 @@
-import { Container } from 'widgets';
+import { Container } from '../../widgets';
 
 export const MainPage = () => {
     return (

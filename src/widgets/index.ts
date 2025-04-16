@@ -1,4 +1,7 @@
-import { Container } from './Container/Container';
-import { Footer } from './Footer/Footer';
-import { Header } from './Header/Header';
-export { Container, Header, Footer };
+// export { Container } from './Container/Container';
+// export { Header } from './Header/Header';
+
+export { Container } from './Container/Container';
+
+// export { Footer } from './Footer/Footer';
+// export { Container };

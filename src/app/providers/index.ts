@@ -1,2 +1,1 @@
-import { ThemeContextProvider } from './contexts/ThemeContext';
-export { ThemeContextProvider };
+export { ThemeContextProvider } from './contexts/ThemeContext';

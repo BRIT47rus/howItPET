@@ -1,4 +1,4 @@
-import { LinkUL } from 'shared';
+import { LinkUL } from '../../shared';
 import cls from './SideBar.module.scss';
 export const SideBar = () => {
     return (

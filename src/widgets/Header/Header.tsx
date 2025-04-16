@@ -1,4 +1,4 @@
-import { LinkHref } from 'shared';
+import { LinkHref } from '../../shared';
 import cls from './Header.module.scss';
 
 export const Header = () => {

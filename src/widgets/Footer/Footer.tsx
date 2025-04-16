@@ -1,4 +1,4 @@
-import { LinkHref } from 'shared';
+import { LinkHref } from '../../shared';
 
 export const Footer = () => {
     return (
