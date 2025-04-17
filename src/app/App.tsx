@@ -3,6 +3,7 @@ import { Container } from '../widgets';
 import { Footer } from '../widgets/Footer/Footer';
 import { Header } from '../widgets/Header/Header';
 import { ThemeContextProvider } from './providers';
+import './index.scss';
 
 export function App() {
     return (

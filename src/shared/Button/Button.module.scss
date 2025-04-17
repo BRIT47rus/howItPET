@@ -1,0 +1,9 @@
+.btnWrapper {
+    border: 1px solid var(--color-text-invert);
+    color: var(--color-text-invert);
+    button {
+        color: inherit;
+        border: none;
+        background: none;
+    }
+}
