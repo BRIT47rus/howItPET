@@ -3,13 +3,17 @@ import { createContext, ReactNode, useContext, useState } from 'react';
 // Определяем тип для значения контекста
 type ThemeContextType = {
     theme: string;
-    setTheme: React.Dispatch<React.SetStateAction<string>>;
+    changeTheme: () => void;
 };
 
 // Определяем тип для пропсов ThemeContextProvider
 type TThemeProviderProps = {
     children: ReactNode;
 };
+export enum THEME {
+    LIGHT = 'lightTheme',
+    DARK = 'darkTheme',
+}
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
@@ -24,11 +28,18 @@ export const useTheme = () => {
 };
 
 export const ThemeContextProvider = ({ children }: TThemeProviderProps) => {
-    const [theme, setTheme] = useState<string>('');
+    const [theme, setTheme] = useState<string>(THEME.LIGHT);
+    const changeTheme = () => {
+        if (theme === THEME.DARK) {
+            setTheme(THEME.LIGHT);
+        } else {
+            setTheme(THEME.DARK);
+        }
+    };
 
     const value: ThemeContextType = {
         theme,
-        setTheme,
+        changeTheme,
     };
 
     return (

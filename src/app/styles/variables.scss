@@ -1,0 +1,9 @@
+$text-color-light: red;
+$text-color-dark: blue;
+
+.lightTheme {
+    background-color: $text-color-light;
+}
+.darkTheme {
+    background-color: $text-color-dark;
+}

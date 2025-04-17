@@ -1,6 +1,3 @@
-// import { Container } from '../widgets';
-// import { ThemeContextProvider } from './providers';
-
 import { MainPage } from '../pages';
 import { Container } from '../widgets';
 import { Footer } from '../widgets/Footer/Footer';
@@ -12,7 +9,6 @@ export function App() {
         <>
             <ThemeContextProvider>
                 <Container>
-                    ddd
                     <Header />
                     <MainPage />
                     <Footer />
