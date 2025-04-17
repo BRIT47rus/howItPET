@@ -1,3 +1,4 @@
+@use './variables.scss';
 body {
     font-size: 24px;
     box-sizing: border-box;
@@ -12,4 +13,14 @@ a {
 }
 li {
     text-decoration: none;
+}
+
+:global {
+    body[data-theme='lightTheme'] {
+        background: var(--text-color-light);
+        font-size: 40px;
+    }
+    body[data-theme='darkTheme'] {
+        background: var(--text-color-dark);
+    }
 }
