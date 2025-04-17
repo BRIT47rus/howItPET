@@ -13,3 +13,10 @@
         --color-text-invert: var(--text-color-light);
     }
 }
+
+.btn {
+    display: inline;
+    border: 1px solid red;
+    border-radius: 32px;
+    padding: 8px 24px;
+}

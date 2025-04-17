@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { THEME, useTheme } from '../../app/providers/contexts/ThemeContext';
 import { Button, LinkHref } from '../../shared';
 import cls from './Header.module.scss';
+import { DayIcon } from '../../shared/ThemeImage/ThemeImage';
 
 export const Header = () => {
     const { changeTheme, theme } = useTheme();
@@ -16,7 +17,8 @@ export const Header = () => {
             <LinkHref label="Связь" />
             <LinkHref label="Что-то" />
             <LinkHref label="Еще что-то" />
-            <Button label="Theme" handleClick={changeTheme} />
+            <DayIcon />
+            <Button label="Theme" handleClick={changeTheme} clazz={cls.btn} />
         </div>
     );
 };
