@@ -1,11 +1,9 @@
-type TSizeLinkItem = {
-    width: number;
-    height: number;
-};
+import { CSSProperties } from 'react';
+
 type TLinkItem = {
     label: string;
     href?: string;
-    sizeStyle?: TSizeLinkItem;
+    sizeStyle?: CSSProperties;
 };
 
 export const LinkHref = ({

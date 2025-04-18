@@ -9,6 +9,7 @@
     height: 100%;
     animation: circleItem 50s infinite;
     z-index: -1;
+    transition: position 2s ease;
 }
 
 @keyframes circleItem {

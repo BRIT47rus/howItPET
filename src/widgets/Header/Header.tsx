@@ -13,20 +13,22 @@ export const Header = () => {
     }, [theme]);
 
     const styleIcon: CSSProperties = {
-        right: isDay ? '' : '1px',
+        left: isDay ? 0 : '',
     };
 
     const handleChangeTheme = () => {
         changeTheme();
         setIsDay((prev) => !prev);
     };
-
+    const sizeStyle: CSSProperties = {
+        marginRight: 16,
+    };
     return (
         <div className={cls.header}>
-            <LinkHref label="Главная" />
-            <LinkHref label="Связь" />
-            <LinkHref label="Что-то" />
-            <LinkHref label="Еще что-то" />
+            <LinkHref label="Главная" sizeStyle={sizeStyle} />
+            <LinkHref label="Связь" sizeStyle={sizeStyle} />
+            <LinkHref label="Что-то" sizeStyle={sizeStyle} />
+            <LinkHref label="Еще что-то" sizeStyle={sizeStyle} />
 
             <div className={cls.themeChange}>
                 <Button
