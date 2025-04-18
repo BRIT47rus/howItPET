@@ -1,0 +1,22 @@
+.icon {
+    // min-width: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0.1px;
+    outline: 1px rgba(0, 0, 0, 0.17) solid;
+    background: rgba(255, 255, 255, 0.534);
+    border-radius: 100%;
+    height: 100%;
+    animation: circleItem 50s infinite;
+    z-index: -1;
+}
+
+@keyframes circleItem {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -5,18 +5,38 @@
         background: var(--text-color-light);
 
         --color-text-invert: var(--text-color-dark);
+        --color-text-invert-black: var(--text-color-dark);
         color: var(--color-text-invert);
     }
     body[data-theme='darkTheme'] {
         background: var(--text-color-dark);
         color: var(--color-text-invert);
         --color-text-invert: var(--text-color-light);
+        --color-text-invert-black: var(--text-color-light);
     }
 }
 
 .btn {
-    display: inline;
-    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // box-shadow: inset 2px 2px 4px var(--color-text-invert);
+    width: 100%;
+    display: flex;
+
+    z-index: 1;
+}
+.themeChange {
+    position: relative;
+    overflow: hidden;
+
+    width: 10px;
+    height: 10px;
+    background: var(--color-text-invert-black);
+    display: flex;
     border-radius: 32px;
     padding: 8px 24px;
+    color: var(--color-text-invert);
 }
