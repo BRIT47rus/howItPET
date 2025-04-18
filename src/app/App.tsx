@@ -1,20 +1,19 @@
 import { MainPage } from '../pages';
-import { Container } from '../widgets';
 import { Footer } from '../widgets/Footer/Footer';
 import { Header } from '../widgets/Header/Header';
 import { ThemeContextProvider } from './providers';
 import './index.scss';
+import { SideBar } from '../widgets/SideBar/SideBar';
 
 export function App() {
     return (
-        <>
+        <div className="app">
             <ThemeContextProvider>
-                <Container>
-                    <Header />
-                    <MainPage />
-                    <Footer />
-                </Container>
+                <SideBar />
+                <Header />
+                <MainPage />
+                <Footer />
             </ThemeContextProvider>
-        </>
+        </div>
     );
 }

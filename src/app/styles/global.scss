@@ -2,6 +2,7 @@ body {
     font-size: 24px;
     box-sizing: border-box;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -13,4 +14,12 @@ a {
 }
 li {
     text-decoration: none;
+}
+.app {
+    position: relative;
+    padding: 0 24px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
 }

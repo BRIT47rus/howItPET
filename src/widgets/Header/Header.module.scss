@@ -1,16 +1,19 @@
 :global {
     body[data-theme='lightTheme'] {
         background: var(--text-color-light);
+        color: var(--color-text-invert);
 
         --color-text-invert: var(--text-color-dark);
         --color-text-invert-black: var(--text-color-dark);
-        color: var(--color-text-invert);
+        --color-for-modal: var(--text-color-light);
     }
     body[data-theme='darkTheme'] {
         background: var(--text-color-dark);
         color: var(--color-text-invert);
+
         --color-text-invert: var(--text-color-light);
         --color-text-invert-black: var(--text-color-light);
+        --color-for-modal: var(--text-color-dark);
     }
 }
 .header {
