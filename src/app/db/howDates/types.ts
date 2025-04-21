@@ -1,11 +1,13 @@
-export interface Finance {
+export interface ArticleT {
     titleData: string;
     bgImage: string;
-    ipoteka: {
+    text: {
         title: string;
-        steps: {
-            title: string;
-            text: string;
-        }[];
+        text:
+            | {
+                  title: string;
+                  text: string;
+              }[]
+            | string;
     };
 }

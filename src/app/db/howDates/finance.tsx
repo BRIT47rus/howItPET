@@ -1,9 +1,9 @@
-import { Finance } from './types';
+import { ArticleT } from './types';
 
-export const financeData: Finance = {
+export const financeData: ArticleT = {
     titleData: 'Финансы',
     bgImage: '../../assets/backgroundImg/financeBG.png',
-    ipoteka: {
+    text: {
         title: 'Ипотека в 2025 году.',
         steps: [
             {
