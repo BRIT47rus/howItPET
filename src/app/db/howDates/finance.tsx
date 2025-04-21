@@ -2,6 +2,7 @@ import { Finance } from './types';
 
 export const financeData: Finance = {
     titleData: 'Финансы',
+    bgImage: '../../assets/backgroundImg/financeBG.png',
     ipoteka: {
         title: 'Ипотека в 2025 году.',
         steps: [

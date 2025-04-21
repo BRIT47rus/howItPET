@@ -1,10 +1,10 @@
 import { data } from '../../app/db/data';
 import { Container } from '../../widgets';
-
+import cls from './MainPage.module.scss';
 export const MainPage = () => {
     const { financeData } = data;
     return (
-        <Container>
+        <Container classess={cls.bgFinance}>
             <h2>{financeData.ipoteka.title}</h2>
             {financeData.ipoteka.steps.map((step, index) => (
                 <div key={index}>
