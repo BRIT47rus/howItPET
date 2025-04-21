@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { LinkUL } from '../../shared';
 import cls from './SideBar.module.scss';
-const arrayLinks = [1, 2, 3, 5, 6];
+import { data } from '../../app/db/data';
+
 export const SideBar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -19,13 +20,12 @@ export const SideBar = () => {
                     padding: isOpen ? '12px 20px' : '12px 1px',
                 }}
             >
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
-                <LinkUL label={isOpen ? 'Финансы' : ''} />
+                {Object.keys(data).map((title, idx) => (
+                    <LinkUL
+                        label={isOpen ? data[title].titleData : ''}
+                        key={idx}
+                    />
+                ))}
             </ul>
         </div>
     );

@@ -5,12 +5,11 @@ export const MainPage = () => {
     const { financeData } = data;
     return (
         <Container>
-            <div>Тексе из Главной страницы</div>
             <h2>{financeData.ipoteka.title}</h2>
-            {financeData.ipoteka.steps.map((step) => (
-                <div>
-                    <h3>step.title</h3>
-                    <div>step.text</div>
+            {financeData.ipoteka.steps.map((step, index) => (
+                <div key={index}>
+                    <h3>{step.title}</h3>
+                    <div dangerouslySetInnerHTML={{ __html: step.text }} />
                 </div>
             ))}
         </Container>
