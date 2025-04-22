@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { LinkUL } from '../../shared';
 import cls from './SideBar.module.scss';
 import { data as importedData } from '../../app/db/data';
+import { getArticle } from '../../app/providers/slices/articleSlice';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from '../../app/providers/store/store';
 
-// Определите тип для элемента данных
 interface DataItem {
     titleData: string;
-    // Добавьте другие свойства, которые есть в ваших данных
 }
 
-// Определите тип для объекта data
 interface Data {
     [key: string]: DataItem;
 }
@@ -19,9 +19,14 @@ const data: Data = importedData;
 
 export const SideBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
-
+    const dispatch = useDispatch<AppDispatch>();
     const handleOpen = () => {
         setIsOpen((prev) => !prev);
+    };
+
+    const handleClick = (title: string) => {
+        dispatch(getArticle(title));
+        console.log('click');
     };
 
     return (
@@ -39,6 +44,7 @@ export const SideBar: React.FC = () => {
                     <LinkUL
                         label={isOpen ? data[title].titleData : ''}
                         key={idx}
+                        onClick={() => handleClick(title)}
                     />
                 ))}
             </ul>

@@ -1,4 +1,4 @@
-import { financeData } from './howDates/finance';
+import { financeData, testData } from './howDates/finance';
 import { ArticleT } from './howDates/types';
 const intialState: ArticleT = {
     titleData: 'начальный экран',
@@ -11,4 +11,5 @@ const intialState: ArticleT = {
 export const data = {
     intialState,
     financeData,
+    testData,
 };
