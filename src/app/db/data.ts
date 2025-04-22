@@ -3,9 +3,16 @@ import { ArticleT } from './howDates/types';
 const intialState: ArticleT = {
     titleData: 'начальный экран',
     bgImage: '',
-    text: {
-        title: 'Заголовок',
-        text: 'Тестовая',
+    info: {
+        test: {
+            title: 'Заголовок',
+            text: [
+                {
+                    title: 'Тестовый заголовок',
+                    text: 'Тестовая',
+                },
+            ],
+        },
     },
 };
 export const data = {

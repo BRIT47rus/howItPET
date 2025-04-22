@@ -9,11 +9,9 @@ import { AppDispatch } from '../../app/providers/store/store';
 interface DataItem {
     titleData: string;
 }
-
 interface Data {
     [key: string]: DataItem;
 }
-
 // Переопределите тип 'data' с использованием нашего интерфейса
 const data: Data = importedData;
 
@@ -26,7 +24,6 @@ export const SideBar: React.FC = () => {
 
     const handleClick = (title: string) => {
         dispatch(getArticle(title));
-        console.log('click');
     };
 
     return (
