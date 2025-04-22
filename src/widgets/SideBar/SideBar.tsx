@@ -1,14 +1,29 @@
 import { useState } from 'react';
 import { LinkUL } from '../../shared';
 import cls from './SideBar.module.scss';
-import { data } from '../../app/db/data';
+import { data as importedData } from '../../app/db/data';
 
-export const SideBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+// Определите тип для элемента данных
+interface DataItem {
+    titleData: string;
+    // Добавьте другие свойства, которые есть в ваших данных
+}
+
+// Определите тип для объекта data
+interface Data {
+    [key: string]: DataItem;
+}
+
+// Переопределите тип 'data' с использованием нашего интерфейса
+const data: Data = importedData;
+
+export const SideBar: React.FC = () => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const handleOpen = () => {
         setIsOpen((prev) => !prev);
     };
+
     return (
         <div className={cls.sideBar}>
             <div onClick={handleOpen}>x</div>
