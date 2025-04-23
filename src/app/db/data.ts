@@ -1,7 +1,7 @@
 import { financeData, testData } from './howDates/finance';
 import { ArticleT } from './howDates/types';
 const intialState: ArticleT = {
-    titleData: 'начальный экран',
+    titleData: 'начальный База',
     bgImage: '',
     info: {
         test: {
@@ -9,7 +9,7 @@ const intialState: ArticleT = {
             text: [
                 {
                     title: 'Тестовый заголовок',
-                    text: 'Тестовая',
+                    text: 'Тестовая информация',
                 },
             ],
         },

@@ -19,11 +19,11 @@ export const articleSclice = createSlice({
     name: 'articles',
     initialState,
     reducers: {
-        getArticle: (
-            state,
-            action: PayloadAction<string>
-        ): ArticleT | undefined => {
+        getArticle: (state, action: PayloadAction<string>): ArticleT => {
             return data[action.payload];
+        },
+        settedArtcile: (action: PayloadAction<string>) => {
+            data.
         },
     },
 });

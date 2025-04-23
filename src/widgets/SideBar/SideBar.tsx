@@ -24,6 +24,7 @@ export const SideBar: React.FC = () => {
 
     const handleClick = (title: string) => {
         dispatch(getArticle(title));
+        setIsOpen((prev) => !prev);
     };
 
     return (

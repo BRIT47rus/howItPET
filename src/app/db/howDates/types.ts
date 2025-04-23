@@ -1,3 +1,5 @@
+type FinanceType = 'ipoteka' | 'test';
+
 export interface ArticleT {
     titleData: string;
     bgImage: string;
