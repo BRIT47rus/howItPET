@@ -13,6 +13,11 @@ export const MainPage = () => {
         (state: RootState) => state.article
     );
     const [dataStore, setDataStore] = useState<ArticleT>(articleState);
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => {
+        setOpen((prev) => !prev);
+    };
 
     // Эффект, который следит за изменениями в articleState и обновляет локальное состояние
     useEffect(() => {
@@ -23,7 +28,13 @@ export const MainPage = () => {
         <Container classess={cls.content}>
             <h1>{dataStore?.titleData || 'Нет данных'}</h1>
             {dataStore.info.map((item) => (
-                <Article key={item.id} item={item} label={item.title} />
+                <Article
+                    key={item.id}
+                    item={item}
+                    label={item.title}
+                    open={open}
+                    handleClick={handleClick}
+                />
             ))}
         </Container>
     );

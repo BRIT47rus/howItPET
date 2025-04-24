@@ -1,18 +1,14 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { InfoArticleType } from '../../app/db/howDates/types';
 import cls from './Article.module.scss';
 
 interface ArticleProps {
     label: string;
     item: InfoArticleType;
+    open: boolean;
+    handleClick?: () => void;
 }
-export const Article = ({ item, label }: ArticleProps) => {
-    const [open, setOpen] = useState(false);
-
-    const handleClick = () => {
-        setOpen((prev) => !prev);
-    };
-
+export const Article = ({ item, label, open, handleClick }: ArticleProps) => {
     return (
         <div>
             {open ? (
