@@ -3,17 +3,18 @@ import { ArticleT } from './howDates/types';
 const intialState: ArticleT = {
     titleData: 'начальный База',
     bgImage: '',
-    info: {
-        test: {
-            title: 'Заголовок',
+    info: [
+        {
+            id: 'begin',
+            title: 'Заголовок begin',
             text: [
                 {
-                    title: 'Тестовый заголовок',
-                    text: 'Тестовая информация',
+                    title: 'Тестовый заголовок begin',
+                    text: 'Тестовая информация begin',
                 },
             ],
         },
-    },
+    ],
 };
 export const data = {
     intialState,

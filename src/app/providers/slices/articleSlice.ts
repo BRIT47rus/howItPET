@@ -22,9 +22,6 @@ export const articleSclice = createSlice({
         getArticle: (state, action: PayloadAction<string>): ArticleT => {
             return data[action.payload];
         },
-        settedArtcile: (action: PayloadAction<string>) => {
-            data.
-        },
     },
 });
 

@@ -12,8 +12,6 @@ export const MainPage = () => {
         (state: RootState) => state.article
     );
     const [dataStore, setDataStore] = useState<ArticleT>(articleState);
-    const category = dataStore.info;
-    console.log(category);
 
     // Эффект, который следит за изменениями в articleState и обновляет локальное состояние
     useEffect(() => {
@@ -22,12 +20,9 @@ export const MainPage = () => {
 
     return (
         <Container>
-            {dataStore?.titleData || 'Нет данных'}
-            {dataStore?.info..text.map((step, index) => (
-                <div key={index}>
-                    <h3>{step.title}</h3>
-                    <div dangerouslySetInnerHTML={{ __html: step.text }} />
-                </div>
+            <h1>{dataStore?.titleData || 'Нет данных'}</h1>
+            {dataStore.info.map((item) => (
+                <span key={item.id}>{item.title}</span>
             ))}
         </Container>
     );
