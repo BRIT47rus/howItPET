@@ -3,7 +3,8 @@ import { RootState } from '../../app/providers/store/store';
 import { Container } from '../../widgets';
 import { useState, useEffect } from 'react'; // Импортируйте ArticleT
 import { ArticleT } from '../../app/db/howDates/types';
-
+import cls from './MainPage.module.scss';
+import { Article } from '../../widgets/Article/Article';
 // type DataStroreInfoType = ArticleT['info']];
 
 export const MainPage = () => {
@@ -19,10 +20,10 @@ export const MainPage = () => {
     }, [articleState]); // Зависимость - значение, полученное из useSelector
 
     return (
-        <Container>
+        <Container classess={cls.content}>
             <h1>{dataStore?.titleData || 'Нет данных'}</h1>
             {dataStore.info.map((item) => (
-                <span key={item.id}>{item.title}</span>
+                <Article key={item.id} item={item} label={item.title} />
             ))}
         </Container>
     );

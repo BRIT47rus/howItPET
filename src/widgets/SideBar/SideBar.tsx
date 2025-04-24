@@ -2,9 +2,9 @@ import { useState } from 'react';
 import { LinkUL } from '../../shared';
 import cls from './SideBar.module.scss';
 import { data as importedData } from '../../app/db/data';
-import { getArticle } from '../../app/providers/slices/articleSlice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../app/providers/store/store';
+import { getArticleTitle } from '../../app/providers/slices/articleSlice';
 
 interface DataItem {
     titleData: string;
@@ -23,7 +23,7 @@ export const SideBar: React.FC = () => {
     };
 
     const handleClick = (title: string) => {
-        dispatch(getArticle(title));
+        dispatch(getArticleTitle(title));
         setIsOpen((prev) => !prev);
     };
 

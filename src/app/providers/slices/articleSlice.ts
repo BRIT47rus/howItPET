@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { data as importedData } from '../../db/data';
-import { ArticleT } from '../../db/howDates/types';
+import { ArticleT, InfoArticleType } from '../../db/howDates/types';
 
 // Определения интерфейсов
 
@@ -19,14 +19,20 @@ export const articleSclice = createSlice({
     name: 'articles',
     initialState,
     reducers: {
-        getArticle: (state, action: PayloadAction<string>): ArticleT => {
+        getArticleTitle: (state, action: PayloadAction<string>): ArticleT => {
             return data[action.payload];
         },
+        // getArticle: (
+        //     article: InfoArticleType,
+        //     action: PayloadAction<string>
+        // ) => {
+        //     );
+        // },
     },
 });
 
 // Экспортируем action creator
-export const { getArticle } = articleSclice.actions;
+export const { getArticleTitle } = articleSclice.actions;
 
 // Экспортируем reducer
 export default articleSclice.reducer;
