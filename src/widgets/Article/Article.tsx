@@ -10,14 +10,17 @@ interface ArticleProps {
 }
 export const Article = ({ item, label, open, handleClick }: ArticleProps) => {
     return (
-        <div>
+        <div className={cls.article}>
             {open ? (
                 <div>
                     {item.text.map((text, id) => (
                         <div key={id}>
                             <h2>{text.title}</h2>
 
-                            <div>{text.text}</div>
+                            <div
+                                className={cls.text}
+                                dangerouslySetInnerHTML={{ __html: text.text }}
+                            />
                         </div>
                     ))}
                 </div>

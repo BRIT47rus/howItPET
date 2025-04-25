@@ -1,2 +1,17 @@
 .article {
+    max-width: 90%;
+    line-height: 1.2;
+    font-size: 1.6rem;
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+.text {
+    h4 {
+        margin-top: 40px;
+        max-width: 70%;
+        border-bottom: 2px solid var(--color-text-invert-black);
+    }
 }
