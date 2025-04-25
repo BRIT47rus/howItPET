@@ -20,10 +20,9 @@ export const MainPage = () => {
 
     // Эффект, который следит за изменениями в articleState и обновляет локальное состояние
     useEffect(() => {
-        setDataStore(null);
         setDataStore(articleState);
     }, [articleState]); // Зависимость - значение, полученное из useSelector
-
+    console.log(dataStore);
     return (
         <Container classess={cls.content}>
             <h1>{dataStore?.titleData || 'Нет данных'}</h1>
