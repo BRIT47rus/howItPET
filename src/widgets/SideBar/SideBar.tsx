@@ -16,7 +16,6 @@ interface Data {
 
 export const SideBar: React.FC = () => {
     const data: Data = importedData;
-
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const dispatch = useDispatch<AppDispatch>();
@@ -26,8 +25,8 @@ export const SideBar: React.FC = () => {
     };
 
     const handleClick = (title: string) => {
-        dispatch(getArticleTitle(title));
         setIsOpen((prev) => !prev);
+        dispatch(getArticleTitle(title));
     };
 
     return (

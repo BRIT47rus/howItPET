@@ -238,7 +238,7 @@ export const testData: ArticleT = {
     bgImage: '../../assets/backgroundImg/financeBG.png',
     info: [
         {
-            id: 'testedTitle',
+            id: 'testedTitledd',
             title: 'Тестовоый запрос',
             text: [
                 {

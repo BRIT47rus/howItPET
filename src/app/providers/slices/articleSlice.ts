@@ -19,8 +19,15 @@ export const articleSclice = createSlice({
     name: 'articles',
     initialState,
     reducers: {
-        getArticleTitle: (state, action: PayloadAction<string>): ArticleT => {
-            return data[action.payload];
+        getArticleTitle: (state, action: PayloadAction<string>) => {
+            const selectedCategory = data[action.payload];
+            if (selectedCategory) {
+                state.titleData = selectedCategory.titleData;
+                state.info = selectedCategory.info;
+            } else {
+                // state.titleData = null;
+                state.info = [];
+            }
         },
     },
 });
