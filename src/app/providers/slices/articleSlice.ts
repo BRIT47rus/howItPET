@@ -23,9 +23,8 @@ export const articleSclice = createSlice({
             const selectedCategory = data[action.payload];
             if (selectedCategory) {
                 state.titleData = selectedCategory.titleData;
-                state.info = selectedCategory.info;
+                state.info = [...selectedCategory.info]; // <---- Вот это изменение важно!
             } else {
-                // state.titleData = null;
                 state.info = [];
             }
         },

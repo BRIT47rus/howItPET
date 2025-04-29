@@ -16,9 +16,32 @@ export const Article = ({ item, label }: ArticleProps) => {
     }, [item]); // Зависимость от articleState
 
     return (
+        // <div className={cls.article}>
+        // {!openArticle ? (
+        //     <h4 onClick={handleClick}>{label}</h4>
+        // ) : (
+        //     <div>
+        //         <h4 onClick={handleClick}>{label}</h4>
+        //         {item.text.map((text, id) => (
+        //             <div key={id}>
+        //                 <h2>{text.title}</h2>
+
+        //                 <div
+        //                     className={cls.text}
+        //                     dangerouslySetInnerHTML={{ __html: text.text }}
+        //                 />
+        //             </div>
+        //         ))}
+        //     </div>
+        // )}
+        // </div>
         <div className={cls.article}>
+            <div className={cls.header}>
+                {<h4 onClick={handleClick}>{label}</h4>}
+            </div>
+
             {openArticle ? (
-                <div>
+                <div className={cls.main}>
                     {item.text.map((text, id) => (
                         <div key={id}>
                             <h2>{text.title}</h2>
@@ -31,7 +54,7 @@ export const Article = ({ item, label }: ArticleProps) => {
                     ))}
                 </div>
             ) : (
-                <span onClick={handleClick}>{label}</span>
+                ''
             )}
         </div>
     );

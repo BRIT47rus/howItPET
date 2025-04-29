@@ -1,7 +1,10 @@
 .article {
+    display: grid;
+
     max-width: 90%;
     line-height: 1.2;
     font-size: 1.6rem;
+    display: flex;
     h2 {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -13,5 +16,15 @@
         margin-top: 40px;
         max-width: 70%;
         border-bottom: 2px solid var(--color-text-invert-black);
+    }
+}
+.header {
+}
+.main {
+}
+.article {
+    /* Другие стили */
+    &.open {
+        order: 1; /* Перемещает открытую статью вниз */
     }
 }
