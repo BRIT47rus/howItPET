@@ -1,17 +1,23 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { InfoArticleType } from '../../app/db/howDates/types';
 import cls from './Article.module.scss';
 
 interface ArticleProps {
     label: string;
     item: InfoArticleType;
-    open: boolean;
-    handleClick?: () => void;
 }
-export const Article = ({ item, label, open, handleClick }: ArticleProps) => {
+export const Article = ({ item, label }: ArticleProps) => {
+    const [openArticle, setOpenArticle] = useState(false);
+    const handleClick = () => {
+        setOpenArticle((prev) => !prev);
+    };
+    useEffect(() => {
+        setOpenArticle(false); // Сбрасываем состояние при каждом изменении articleState
+    }, [item]); // Зависимость от articleState
+
     return (
         <div className={cls.article}>
-            {open ? (
+            {openArticle ? (
                 <div>
                     {item.text.map((text, id) => (
                         <div key={id}>
@@ -30,4 +36,3 @@ export const Article = ({ item, label, open, handleClick }: ArticleProps) => {
         </div>
     );
 };
-// :
